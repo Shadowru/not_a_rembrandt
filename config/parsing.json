@@ -1,0 +1,9 @@
+{
+  "object_tag": "object",
+  "attributes": {
+    "name": "c4Name",
+    "type": "c4Type",
+    "description": "c4Description"
+  },
+  "ignored_types": ["Legend", "Boundary"]
+}

@@ -1,0 +1,15 @@
+{
+  "default_width": 140,
+  "default_height": 100,
+  "colors": {
+    "Person": "#08427B",
+    "Software System": "#1168BD",
+    "Container": "#438DD5",
+    "Component": "#85BBF0"
+  },
+  "shapes": {
+    "Person": "shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=1;",
+    "System": "shape=mxgraph.c4.softwareSystem;align=center;metaEdit=1;whiteSpace=wrap;",
+    "Container": "shape=mxgraph.c4.container;align=center;metaEdit=1;whiteSpace=wrap;"
+  }
+}

@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2023-10-01T00:00:00.000Z" agent="C4-Builder" version="21.0.0" type="device">
+  <diagram id="GeneratedC4" name="Page-1">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        {% for node in nodes %}
+        <object placeholders="1" c4Name="{{ node.name }}" c4Type="{{ node.type }}" c4Description="{{ node.description }}" id="{{ node.id }}">
+          <mxCell style="{{ node.style }}" parent="1" vertex="1">
+            <mxGeometry x="{{ node.x }}" y="{{ node.y }}" width="{{ node.w }}" height="{{ node.h }}" as="geometry" />
+          </mxCell>
+        </object>
+        {% endfor %}
+
+        {% for edge in edges %}
+        <mxCell id="edge_{{ loop.index }}" value="{{ edge.label }}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="{{ edge.source }}" target="{{ edge.target }}">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        {% endfor %}
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
