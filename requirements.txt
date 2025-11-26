@@ -1,4 +1,0 @@
-psycopg2-binary
-lxml
-networkx
-jinja2

@@ -1,0 +1,22 @@
+graph TD
+    subgraph K8s Cluster
+        API[K8s API Server]
+        Pods[App Pods]
+        Ingress[Ingress Controllers]
+        Mesh[Service Mesh / Prometheus]
+    end
+
+    subgraph "System Core"
+        Agent[Collector Agent] -->|Raw Data| Processor[Logic Processor]
+        Processor -->|Nodes & Relationships| GDB[(Graph Database)]
+    end
+
+    subgraph "Presentation Layer"
+        API_GW[API Gateway] -->|Query| GDB
+        UI[Frontend / CLI] -->|Request Diagram| API_GW
+        API_GW -->|C4 Code| UI
+    end
+
+    API -.-> Agent
+    Pods -.->|OpenAPI Specs| Agent
+    Mesh -.->|Traffic Metrics| Agent
